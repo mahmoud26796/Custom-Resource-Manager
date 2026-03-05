@@ -7,15 +7,16 @@
   "scripts": {
     "transpile:electron": "tsc --project src/Electron/tsconfig.json",
     "dev:react": "vite",
-    "dev:electron": "electron .",
+    "dev:electron": "cross-env NODE_ENV=development electron .",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "dist:win" : "npm run transpile:electron && npm run build && electron-builder --win --x64",
-    "dist:mac" : "npm run transpile:electron && npm run build && electron-builder --mac --arm64",
-    "dist:linux" : "npm run transpile:electron && npm run build && electron-builder --linux --x64"
+    "dist:win": "npm run transpile:electron && npm run build && electron-builder --win --x64",
+    "dist:mac": "npm run transpile:electron && npm run build && electron-builder --mac --arm64",
+    "dist:linux": "npm run transpile:electron && npm run build && electron-builder --linux --x64"
   },
   "dependencies": {
+    "cross-env": "^10.1.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
