@@ -1,6 +1,7 @@
 {
     "appId" : "resource-manager",
     "files" : ["dist-react", "dist-electron"],
+    "icon" : "./desktopIcon.png",
     "mac":{
         "target": "dmg"
     },
