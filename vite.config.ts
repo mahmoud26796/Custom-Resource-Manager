@@ -7,5 +7,9 @@ export default defineConfig({
   base : './', // specify the correct base path so the assets work properly
   build: {
     outDir: 'dist-react'
+  },
+  server:{
+    port: 5173, // default port for the vite application 
+    strictPort: true
   }
 })
